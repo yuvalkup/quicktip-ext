@@ -235,8 +235,10 @@ function addSelectionListener() {
     
         gFormatter.reset(text);
         var tooltipText = gFormatter.getFormatsString();
-        var rect = selection.getRangeAt(0).getBoundingClientRect();
-    
+
+        var anchor = selection.isCollapsed ? document.activeElement : selection.getRangeAt(0);
+        var rect = anchor.getBoundingClientRect();
+
         gTooltip.show(rect, tooltipText);
     });
 }
