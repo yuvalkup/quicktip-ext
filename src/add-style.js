@@ -1,5 +1,5 @@
 const css = `
-.cteTooltip {
+.qteTooltip {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,19 +23,19 @@ const css = `
   font-weight: 400;
   font-size: 14px;
 }
-.cteTooltip.top {
+.qteTooltip.top {
   margin-top: -10px;
 }
-.cteTooltip.right {
+.qteTooltip.right {
   margin-left: 10px;
 }
-.cteTooltip.bottom {
+.qteTooltip.bottom {
   margin-top: 10px;
 }
-.cteTooltip.left {
+.qteTooltip.left {
   margin-left: -10px;
 }
-.cteTooltip-title {
+.qteTooltip-title {
   padding: 8px 14px;
   margin: 0;
   font-size: 14px;
@@ -45,11 +45,11 @@ const css = `
   border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0;
 }
-.cteTooltip-content {
+.qteTooltip-content {
   padding: 9px 14px;
 }
-.cteTooltip .arrow,
-.cteTooltip .arrow:after {
+.qteTooltip .arrow,
+.qteTooltip .arrow:after {
   position: absolute;
   display: block;
   width: 0;
@@ -57,14 +57,14 @@ const css = `
   border-color: transparent;
   border-style: solid;
 }
-.cteTooltip .arrow {
+.qteTooltip .arrow {
   border-width: 11px;
 }
-.cteTooltip .arrow:after {
+.qteTooltip .arrow:after {
   border-width: 10px;
   content: "";
 }
-.cteTooltip.top .arrow {
+.qteTooltip.top .arrow {
   bottom: -11px;
   left: 50%;
   margin-left: -11px;
@@ -72,14 +72,14 @@ const css = `
   border-top-color: rgba(0, 0, 0, 0.25);
   border-bottom-width: 0;
 }
-.cteTooltip.top .arrow:after {
+.qteTooltip.top .arrow:after {
   bottom: 1px;
   margin-left: -10px;
   border-top-color: #ffffff;
   border-bottom-width: 0;
   content: " ";
 }
-.cteTooltip.right .arrow {
+.qteTooltip.right .arrow {
   top: 50%;
   left: -11px;
   margin-top: -11px;
@@ -87,14 +87,14 @@ const css = `
   border-right-color: rgba(0, 0, 0, 0.25);
   border-left-width: 0;
 }
-.cteTooltip.right .arrow:after {
+.qteTooltip.right .arrow:after {
   bottom: -10px;
   left: 1px;
   border-right-color: #ffffff;
   border-left-width: 0;
   content: " ";
 }
-.cteTooltip.bottom .arrow {
+.qteTooltip.bottom .arrow {
   top: -11px;
   left: 50%;
   margin-left: -11px;
@@ -102,14 +102,14 @@ const css = `
   border-bottom-color: rgba(0, 0, 0, 0.25);
   border-top-width: 0;
 }
-.cteTooltip.bottom .arrow:after {
+.qteTooltip.bottom .arrow:after {
   top: 1px;
   margin-left: -10px;
   border-bottom-color: #ffffff;
   border-top-width: 0;
   content: " ";
 }
-.cteTooltip.left .arrow {
+.qteTooltip.left .arrow {
   top: 50%;
   right: -11px;
   margin-top: -11px;
@@ -117,7 +117,7 @@ const css = `
   border-left-color: rgba(0, 0, 0, 0.25);
   border-right-width: 0;
 }
-.cteTooltip.left .arrow:after {
+.qteTooltip.left .arrow:after {
   right: 1px;
   bottom: -10px;
   border-left-color: #ffffff;
@@ -131,6 +131,6 @@ function addStyle(styleString) {
     style.textContent = styleString;
     document.head.append(style);
 }
-  
+
 
 addStyle(css);

@@ -1,17 +1,14 @@
 {
-  "name": "Custom Tooltip",
+  "name": "QuickTip",
   "version": "1.0",
   "manifest_version": 3,
   "minimum_chrome_version": "120",
-  "description": "Uses the chrome.userScripts API to inject JavaScript into web pages.",
-  "background": {
-    "service_worker": "sw.js"
-  },
-  "permissions": ["storage", "userScripts"],
+  "description": "Adds a formatted tooltip to selected values",
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["./dist/bundle.js"],
+    "type": "module"
+  }],
   "host_permissions": ["<all_urls>"],
-  "action": {},
-  "options_ui": {
-    "page": "options-page/options.html",
-    "open_in_tab": true
-  }
+  "action": {}
 }
