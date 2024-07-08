@@ -2,6 +2,7 @@ import { EpochFormatter } from "./formatters/epoch.js"
 import { Base64Formatter } from "./formatters/base64.js"
 
 export const ALL_FORMATTERS = [
+    // new ExampleFormatter(),
     new EpochFormatter(),
     new Base64Formatter(),
 ];
