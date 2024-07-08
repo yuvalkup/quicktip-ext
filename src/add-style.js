@@ -126,11 +126,8 @@ const css = `
 }
 `;
 
-function addStyle(styleString) {
+export function addStyle() {
     const style = document.createElement('style');
-    style.textContent = styleString;
+    style.textContent = css;
     document.head.append(style);
 }
-
-
-addStyle(css);
