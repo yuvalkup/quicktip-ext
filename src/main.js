@@ -1,6 +1,5 @@
-import { addStyle } from "./add-style.js"
-import { ToolTip } from "./tooltip.js"
-import { Formatter } from "./formatter.js";
+import { ToolTip } from "./tooltip.js";
+import { FormatterChain } from "./formatter-chain.js";
 import { KeyboardListener } from "./keyboard-listener.js";
 
 
@@ -35,9 +34,7 @@ function onDocumentReady(cb) {
 function main() {
     const listener = new KeyboardListener();
     const tooltip = new ToolTip(listener);
-    const formatter = new Formatter();
-
-    addStyle();
+    const formatter = new FormatterChain();
 
     onDocumentReady(() => {
         addSelectionListener(tooltip, formatter);

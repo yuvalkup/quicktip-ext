@@ -107,5 +107,4 @@ export class EpochFormatter {
     _epochToISO(epoch) {
         return new Date(epoch).toISOString();
     }
-
 }

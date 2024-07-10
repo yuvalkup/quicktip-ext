@@ -7,6 +7,7 @@
   "content_scripts": [{
     "matches": ["<all_urls>"],
     "js": ["./dist/bundle.js"],
+    "css": ["./style.css"],
     "type": "module"
   }],
   "host_permissions": ["<all_urls>"],
