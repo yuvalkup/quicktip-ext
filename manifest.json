@@ -6,7 +6,7 @@
   "description": "Adds a formatted tooltip to selected values",
   "content_scripts": [{
     "matches": ["<all_urls>"],
-    "js": ["./dist/bundle.js"],
+    "js": ["./bundle.js"],
     "css": ["./style.css"],
     "type": "module"
   }],
