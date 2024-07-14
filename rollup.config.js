@@ -24,6 +24,8 @@ export default {
       targets: [
         { src: 'style.css', dest: 'dist' },
         { src: 'manifest.json', dest: 'dist' },
+        { src: 'src/sw.js', dest: 'dist' },
+        { src: 'src/options/', dest: 'dist' },
       ]
     }),
   ],

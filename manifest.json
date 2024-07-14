@@ -11,5 +11,13 @@
     "type": "module"
   }],
   "host_permissions": ["<all_urls>"],
-  "action": {}
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "action": {},
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  }
 }

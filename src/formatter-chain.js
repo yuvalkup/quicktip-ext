@@ -6,6 +6,10 @@ export class FormatterChain {
         this._formatters = formatters || DEFAULT_FORMATTERS;
     }
 
+    register(fmts) {
+        this._formatters.unshift(...fmts);
+    }
+
     format(text) {
         const matched = this._formatters.filter(i => i.match(text));
         if (matched.length == 0) {
