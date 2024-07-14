@@ -49,6 +49,7 @@ Only well known and well defined formats will be accepted.
             "format": "New format, in which ${text} will be replaced with the selected text"
         }
     ```
+
     c. for example:
 
     ```
