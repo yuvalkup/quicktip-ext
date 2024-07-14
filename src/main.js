@@ -29,7 +29,8 @@ async function getFromStorage() {
         json: "[]"
       });
 
-    return JSON.parse(json);
+    const escaped = json.replaceAll('\\', '\\\\');
+    return JSON.parse(escaped);
 }
 
 function addUserFormatters(chain) {

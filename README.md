@@ -33,8 +33,38 @@ GIF-HERE
 Only well known and well defined formats will be accepted.
 
 
-### For propietary formats - Add a custom JS to your extension settings
+### For propietary formats - Add a custom Json to your extension settings
 
-1. Open options page
-2. Write down code
-3. Save and refresh pages
+1. Click on the extenion icon in your browser.
+2. Add your custom json in the following format:
+
+    a. The json file should contain a list of JSON objects
+
+    b. Each object has the following scheme
+
+    ```
+        {
+            "title": "Title to be shown on the tooltip",
+            "match": "regular expression to match text",
+            "format": "New format, in which ${text} will be replaced with the selected text"
+        }
+    ```
+    c. for example:
+
+    ```
+    [
+        {
+            "title": "Email",
+            "match": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+            "format": "<a href=mailto:${text}>Send mail</a>"
+        },
+        {
+            "title": "Phone",
+            "match": "^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$",
+            "format": "<a href=https://wa.me/${text}>Whatsapp</a>"
+        },
+        ...
+    ]
+    ```
+3. Click Save.
+4. For already opened tabs - refresh the page for the new json to take effect.
